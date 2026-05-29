@@ -1,0 +1,135 @@
+:root {
+  --rojo:        #c0392b;   /* color principal */
+  --rojo-oscuro: #96281b;   /* hover de botones */
+  --texto:       #222222;   /* texto principal */
+  --gris:        #666666;   /* texto secundario */
+  --fondo:       #ffffff;   /* fondo de la pagina */
+  --sombra:      0 2px 6px rgba(0, 0, 0, 0.08);
+  --radio:       8px;       /* redondeo de esquinas */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #222222;
+}
+
+header {
+  background-color: var(--fondo);
+  border-bottom: 3px solid var(--rojo);
+  padding: 16px 24px;
+}
+
+header span {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--rojo);
+}
+
+main {
+  max-width: 900px;
+  margin: 40px auto;   /* 40px arriba/abajo, auto izq/der = centrado */
+  padding: 0 20px;
+  display: flex;       /* pone los hijos en fila */
+  gap: 24px;           /* espacio entre cards y formulario */
+  align-items: flex-start;
+}
+
+/* PADRE — organiza las cards en columna */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;             /* ocupa la mitad del main */
+}
+
+/* HIJO — cada card individual */
+.card {
+  border-left: 4px solid var(--rojo);
+  border-radius: var(--radio);
+  padding: 20px;
+  box-shadow: var(--sombra);
+}
+
+.card h3 {
+  color: var(--rojo);
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: var(--gris);
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.card a {
+  color: var(--rojo);
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+form {
+  border-radius: var(--radio);
+  padding: 28px;
+  flex: 1;             /* ocupa la mitad del main */
+  box-shadow: var(--sombra);
+}
+
+form h2 {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-top: 14px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dddddd;
+  border-radius: var(--radio);
+  font-size: 14px;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--rojo);
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background-color: var(--rojo);
+  color: var(--fondo);
+  border: none;
+  border-radius: var(--radio);
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: var(--rojo-oscuro);
+}
+
+footer {
+  text-align: center;
+  padding: 16px;
+  margin-top: 40px;
+  background-color: var(--texto);
+  color: var(--fondo);
+  font-size: 0.9rem;
+}
